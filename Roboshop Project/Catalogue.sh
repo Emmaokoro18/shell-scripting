@@ -1,8 +1,11 @@
+cp Catalogue.service /etc/systemd/system/catalogue.service
+cp Mongo.service /etc/yum.repos.d/mongo.repo
+
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
-cp Catalogue.service /etc/systemd/system/catalogue.service
 
-cp Mongo.service /etc/yum.repos.d/mongo.repo
+
+
 
 useradd roboshop
 mkdir /app
@@ -18,8 +21,6 @@ npm install
 
 systemctl daemon-reload
 
-
-cp Mongo.service /etc/yum.repos.d/mongo.repo
 
 yum install mongodb-org-shell -y
 
