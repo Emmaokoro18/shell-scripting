@@ -12,7 +12,7 @@ go mod init dispatch
 go get
 go build
 
-cp Dispatch-service /etc/systemd/system/dispatch.service
+cp Dispatch.service /etc/systemd/system/dispatch.service
 
 systemctl daemon-reload
 

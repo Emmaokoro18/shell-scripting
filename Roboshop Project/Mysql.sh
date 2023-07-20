@@ -1,6 +1,6 @@
 yum module disable mysql -y
 
-cp Mysql-service /etc/yum.repos.d/mysql.repo
+cp Mysql.service /etc/yum.repos.d/mysql.repo
 
 yum install mysql-community-server -y
 

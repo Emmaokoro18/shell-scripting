@@ -11,7 +11,7 @@ cd /app
 mvn clean package
 mv target/shipping-1.0.jar shipping.jar
 
-cp Shipping-service /etc/systemd/system/shipping.service
+cp Shipping.service /etc/systemd/system/shipping.service
 
 systemctl daemon-reload
 

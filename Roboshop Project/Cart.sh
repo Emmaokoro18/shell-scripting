@@ -12,7 +12,7 @@ unzip /tmp/cart.zip
 cd /app
 npm install
 
-cp Cart-service /etc/systemd/system/cart.service
+cp Cart.service /etc/systemd/system/cart.service
 
 systemclt daemon-reload
 systemclt enable cart

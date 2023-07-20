@@ -10,7 +10,7 @@ unzip /tmp/payment.zip
 cd /app
 pip3.6 install -r requirements.txt
 
-cp Payment-service /etc/systemd/system/payment.service
+cp Payment.service /etc/systemd/system/payment.service
 
 systemctl daemon-reload
 

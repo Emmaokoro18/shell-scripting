@@ -12,11 +12,11 @@ unzip /tmp/user.zip
 cd /app
 npm install
 
-cp User-service /etc/systemd/system/user.service
+cp User.service /etc/systemd/system/user.service
 
 systemctl daemon-reload
 
-cp Mongo-service /etc/yum.repos.d/mongo.repo
+cp Mongo.service /etc/yum.repos.d/mongo.repo
 
 yum install mongodb-org-shell -y
 
