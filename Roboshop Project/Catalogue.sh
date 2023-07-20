@@ -20,7 +20,7 @@ cp Mongo-service /etc/yum.repos.d/mongo.repo
 
 yum install mongodb-org-shell -y
 
-mongo --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js
+mongo --host mongodb.bigetech.online </app/schema/catalogue.js
 
 systemctl enable catalogue
 systemctl restart catalogue

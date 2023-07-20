@@ -16,7 +16,7 @@ cp Shipping-service /etc/systemd/system/shipping.service
 systemctl daemon-reload
 
 yum install mysql -y
-mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/schema/shipping.sql
+mysql -h mysql.bigetech.online -uroot -pRoboShop@1 < /app/schema/shipping.sql
 
 systemctl enable shipping
 systemctl restart shipping
