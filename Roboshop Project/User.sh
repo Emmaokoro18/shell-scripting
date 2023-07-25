@@ -1,3 +1,9 @@
+echo -e "\e[34m>>>>>>>>>>> Create User System service <<<<<<<<<<<<\e[0m"
+cp User.service /etc/systemd/system/user.service &>>/tmp/roboshop.log
+
+echo -e "\e[34m>>>>>>>>>>> Install Mongo Repo <<<<<<<<<<<<\e[0m"
+cp Mongo.service /etc/yum.repos.d/mongo.repo &>>/tmp/roboshop.log
+
 echo -e "\e[34m>>>>>>>>>>> Install NodeJS repo <<<<<<<<<<<<\e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>/tmp/roboshop.log
 
@@ -24,12 +30,6 @@ echo -e "\e[34m>>>>>>>>>>> Install NOdeJS Dependencies <<<<<<<<<<<<\e[0m"
 cd /app
 npm install &>>/tmp/roboshop.log
 
-echo -e "\e[34m>>>>>>>>>>> Create User System service <<<<<<<<<<<<\e[0m"
-cp User.service /etc/systemd/system/user.service &>>/tmp/roboshop.log
-
-
-echo -e "\e[34m>>>>>>>>>>> Install Mongo Repo <<<<<<<<<<<<\e[0m"
-cp Mongo.service /etc/yum.repos.d/mongo.repo &>>/tmp/roboshop.log
 
 echo -e "\e[34m>>>>>>>>>>> Install MongoDB client <<<<<<<<<<<<\e[0m"
 yum install mongodb-org-shell -y &>>/tmp/roboshop.log
