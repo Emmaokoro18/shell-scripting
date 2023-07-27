@@ -32,15 +32,22 @@ nodejs() {
   cd /app
   npm install &>>${log}
 
+  func_schema_setup
 
-  echo -e "\e[34m>>>>>>>>>>> Install MongoDB client <<<<<<<<<<<<\e[0m"
-  yum install mongodb-org-shell -y &>>${log}
-
-  echo -e "\e[34m>>>>>>>>>>> Load Schema <<<<<<<<<<<<\e[0m"
-  mongo --host mongodb.bigetech.online </app/schema/${component}.js &>>${log}
 
   echo -e "\e[34m>>>>>>>>>>> Start User <<<<<<<<<<<<\e[0m"
   systemctl daemon-reload &>>${log}
   systemctl enable ${component} &>>${log}
   systemctl restart ${component} &>>${log}
+}
+
+func_schema_setup() {
+  if [ "${schema_type}" == "mongodb" ]
+  then
+      echo -e "\e[34m>>>>>>>>>>> Install MongoDB client <<<<<<<<<<<<\e[0m"
+      yum install mongodb-org-shell -y &>>${log}
+
+      echo -e "\e[34m>>>>>>>>>>> Load Schema <<<<<<<<<<<<\e[0m"
+      mongo --host mongodb.bigetech.online </app/schema/${component}.js &>>${log}
+  fi
 }
