@@ -15,10 +15,10 @@ nodejs() {
   echo -e "\e[34m>>>>>>>>>>> Create App User <<<<<<<<<<<<\e[0m"
   useradd roboshop &>>${log}
 
-  echo -e "\e[34m>>>>>>>>>>> Delete existing Service App <<<<<<<<<<<<\e[0m"
+  echo -e "\e[34m>>>>>>>>>>> Delete existing Directory <<<<<<<<<<<<\e[0m"
   rm -rf /app &>>${log}
 
-  echo -e "\e[34m>>>>>>>>>>> Create Service App <<<<<<<<<<<<\e[0m"
+  echo -e "\e[34m>>>>>>>>>>> Create App Directory <<<<<<<<<<<<\e[0m"
   mkdir /app &>>${log}
 
   echo -e "\e[34m>>>>>>>>>>> Download App Content <<<<<<<<<<<<\e[0m"
