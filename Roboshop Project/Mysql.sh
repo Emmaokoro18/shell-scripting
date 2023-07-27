@@ -15,5 +15,7 @@ mysql -uroot -pRoboShop@1 &>>/tmp/roboshop.log
 
 echo -e "\e[34m>>>>>>>>>>> Start Mysql <<<<<<<<<<<<\e[0m"
 systemctl enable mysqld &>>/tmp/roboshop.log
-systemctl start mysqld &>>/tmp/roboshop.log
+systemctl start mysqld &>>/tmp/roboshop.logexit
+
+
 
