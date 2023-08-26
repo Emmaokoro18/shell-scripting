@@ -1,5 +1,5 @@
 echo -e "\e[34m>>>>>>>>>>> Install NGINX <<<<<<<<<<<<\e[0m"
-apt-get install nginx -y &>>/tmp/roboshop.log
+yum install nginx -y &>>/tmp/roboshop.log
 
 echo -e "\e[34m>>>>>>>>>>> Create Frontend Services <<<<<<<<<<<<\e[0m"
 cp Frontend.service /etc/nginx/default.d/roboshop.conf &>>/tmp/roboshop.log
